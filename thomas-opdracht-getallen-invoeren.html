@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opdracht - getal invoer controleren</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+
+<script type="text/javascript">
+	"use strict"
+
+		let controleAantal = (ontvangen) => {
+	if (ontvangen == null) {
+		document.write("U heeft geannuleerd!");
+	}
+	else if (ontvangen.length == 0) {
+		document.write("U heeft niets ingegeven");
+	}
+	else if (ontvangen >= 1) {
+		return ontvangen;
+	}
+	else {
+		document.write("Dit is geen correcte ingave!");
+		return 0;
+		}
+	}
+		let getallen = new Array();
+		let aantal = prompt("Hoeveel getallen wil je ingeven?");
+		aantal = controleAantal(aantal);
+
+	let tweedeControle = (vraag) =>{
+		if(vraag == null || vraag.length == 0 || isNaN(vraag)) {
+			return "fout";
+		}
+		else {
+			return vraag;
+		}
+	}
+
+	if (aantal > 0) {
+		for (let i = 0; i < aantal; i++) {
+			let ontvangen = prompt(`Geef getal nr ${i+1} in:`);
+			getallen[i] = tweedeControle(ontvangen);
+		}
+	}
+
+	document.write(`${getallen}`);
+
+</script>
+</body>
+</html>
