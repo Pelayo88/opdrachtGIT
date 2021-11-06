@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Opdracht - Graad</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+let vraag = prompt("Geef het aantal punten in met 2 cijfers:");
+
+if (vraag == null) {
+	document.write("U heeft geannuleerd!");
+}
+else if (vraag.length == 0 ) {
+	document.write("U heeft niets ingegeven!");
+}
+else if (isNaN(vraag)) {
+	document.write("Dit is geen nummer!");
+}
+else if (vraag.length != 2) {
+	document.write("Geef de punten in met 2 cijfers!");
+} 
+
+
+else {
+
+if (vraag >= 95) {
+	document.write("De graad is: A+");
+}
+else if (vraag >= 90) {
+	document.write("De graad is: A");
+}
+else if (vraag >= 80) {
+	document.write("De graad is: B");
+}
+else if (vraag >= 70) {
+	document.write("De graad is: C");
+}
+else if (vraag >= 60) {
+	document.write("De graad is: D");
+}
+else if (vraag >= 50) {
+	document.write("De graad is: E");
+}
+else {
+	document.write("De graad is: F");
+}
+}
+
+</script>
+
+</body>
+</html>
